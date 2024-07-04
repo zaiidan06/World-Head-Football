@@ -6,7 +6,7 @@ canvas.width = 1500;
 canvas.height = 750;
 
 const playerProperty = {
-  image: "./assets/Characters/CharacterBrazil/Idle/Idle_000.png",
+  image: "../assets/Characters/CharacterBrazil/Idle/Idle_000.png",
   width: 250,
   height: 250,
   color: "red",
@@ -17,7 +17,7 @@ const playerProperty = {
   },
 };
 const enemyProperty = {
-  image: "./assets/Characters/CharacterEngland/Idle/Idle_002.png",
+  image: "../assets/Characters/CharacterEngland/Idle/Idle_002.png",
   width: 250,
   height: 250,
   speed: 5,
@@ -28,41 +28,41 @@ const enemyProperty = {
 };
 
 const ballProperty = {
-  image: "./assets/main/Ball02.png",
+  image: "../assets/main/Ball02.png",
   position: { x: canvas.width / 2 - 50, y: canvas.height - 600 },
   width: 100,
   height: 100,
 };
 
 const goalProperty = {
-  image: "./assets/main/Goal.png",
+  image: "../assets/main/Goal.png",
   position: { x: canvas.width / 15 - 37, y: canvas.height / 2 + 15 },
   width: 140,
   height: 250,
 };
 const goalProperty2 = {
-  image: "./assets/main/Goal1.png",
+  image: "../assets/main/Goal1.png",
   position: { x: canvas.width - 200, y: canvas.height / 2 + 15 },
   width: 140,
   height: 250,
 };
 const flagboardProperty = {
-  images: ["./assets/Flag/Brazil.png", "./assets/Flag/England.png"],
+  images: ["../assets/Flag/Brazil.png", "../assets/Flag/England.png"],
   position: { x: canvas.width / 300, y: canvas.height / 2 + 100 },
   width: 100,
   height: 75,
 };
 
 const ground = new Ground(
-  "./assets/main/background1.jpg",
+  "../assets/main/background1.jpg",
   canvas.width,
   canvas.height
 );
 
 const player = new Player(playerProperty);
 const enemy = new Enemy(enemyProperty);
-const score = new Score(200, 100, "darkblue");
-const timer = new Timer(0, 150, 50);
+const score = new Score(200, 80, "darkblue");
+// const timer = new Timer(0, 150, 50);
 const ball = new Ball(
   ballProperty.image,
   ballProperty.position,
@@ -99,7 +99,7 @@ function animate() {
   goal.create();
   goall.create();
   score.create();
-  timer.create();
+  // timer.create();
   player.update();
   enemy.update();
   ball.update();

@@ -1,11 +1,11 @@
 class Timer {
-  constructor(value, width, height,color) {
+  constructor(value, width, height) {
      this.value = value,
      this.width = width,
      this.height = height;
      this.font = "40px Arial";
      this.textColor = "white";
-     //  this.shadowColor = "rgba(0, 0, 0, 0.5)";
+      // this.shadowColor = "rgba(0, 0, 0, 0.5)";
      this.shadowBlur = 10;  }
 
   create(){
